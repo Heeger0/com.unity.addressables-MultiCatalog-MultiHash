@@ -1,5 +1,9 @@
 # Addressables - Multi-Catalog - Multi-Hash
 
+**Note**: 对于 Addressables package `2.3.1` 及之后的版本，请直接下载 release 页面的 `.unitypackage` 文件，并在项目安装了官方 Addressables 软件包后直接导入此文件即可，不需要其他操作。
+新方法将主要功能的脚本从 Unity Addressables 软件包中分离出来，以 .unitypackage 的形式发布，和官方的 Addressables 软件包不冲突。
+具体使用方法参照 <https://github.com/annajcy/addressables_multi_catalog_hash/blob/main/readme_zh.md>
+
 **Note**: 保留了部分原项目 <https://github.com/juniordiscart/com.unity.addressables> 中的说明，添加了修改后新的功能与使用方法的说明。
 
 该项目与原项目的区别在于，可以在打包生成 Multi - Catalogs 的同时生成 Multi - Hashes。由于每个 catalog 对应单独的 hash 文件而非所有 catalog 由单一 hash 文件标识，当个别 catalog 文件对应的 group 内资源被修改时，只有被修改的资源所在的 group 会被重新打包，不会再重新打包所有资源，因此大大提高了使用 Unity Addressables 实现热更新技术时的打包效率。
